@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 28, 2020 at 05:41 AM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.8
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 29-08-2020 a las 08:01:15
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dbasistencia`
+-- Base de datos: `dbasistencia`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `asistencias`
+-- Estructura de tabla para la tabla `asistencias`
 --
 
 CREATE TABLE `asistencias` (
@@ -43,7 +43,7 @@ CREATE TABLE `asistencias` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `asistencias`
+-- Volcado de datos para la tabla `asistencias`
 --
 
 INSERT INTO `asistencias` (`id`, `practicante_id`, `horario_details_id`, `h_entrada`, `h_salida`, `retraso`, `asist_fecha`, `estado`, `asist_mes`, `asist_anio`, `created_at`, `updated_at`) VALUES
@@ -63,7 +63,7 @@ INSERT INTO `asistencias` (`id`, `practicante_id`, `horario_details_id`, `h_entr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `check_faltas`
+-- Estructura de tabla para la tabla `check_faltas`
 --
 
 CREATE TABLE `check_faltas` (
@@ -74,7 +74,7 @@ CREATE TABLE `check_faltas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `check_faltas`
+-- Volcado de datos para la tabla `check_faltas`
 --
 
 INSERT INTO `check_faltas` (`id`, `chk_fecha`, `created_at`, `updated_at`) VALUES
@@ -83,7 +83,7 @@ INSERT INTO `check_faltas` (`id`, `chk_fecha`, `created_at`, `updated_at`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faltas`
+-- Estructura de tabla para la tabla `faltas`
 --
 
 CREATE TABLE `faltas` (
@@ -99,7 +99,7 @@ CREATE TABLE `faltas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `faltas`
+-- Volcado de datos para la tabla `faltas`
 --
 
 INSERT INTO `faltas` (`id`, `practicante_id`, `horario_details_id`, `hr_entrada`, `falta_fecha`, `falta_mes`, `falta_anio`, `created_at`, `updated_at`) VALUES
@@ -120,7 +120,7 @@ INSERT INTO `faltas` (`id`, `practicante_id`, `horario_details_id`, `hr_entrada`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `horarios`
+-- Estructura de tabla para la tabla `horarios`
 --
 
 CREATE TABLE `horarios` (
@@ -132,7 +132,7 @@ CREATE TABLE `horarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `horarios`
+-- Volcado de datos para la tabla `horarios`
 --
 
 INSERT INTO `horarios` (`id`, `h_nombre`, `tolerancia`, `created_at`, `updated_at`) VALUES
@@ -143,7 +143,7 @@ INSERT INTO `horarios` (`id`, `h_nombre`, `tolerancia`, `created_at`, `updated_a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `horario_details`
+-- Estructura de tabla para la tabla `horario_details`
 --
 
 CREATE TABLE `horario_details` (
@@ -157,7 +157,7 @@ CREATE TABLE `horario_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `horario_details`
+-- Volcado de datos para la tabla `horario_details`
 --
 
 INSERT INTO `horario_details` (`id`, `horario_id`, `hd_nombre`, `horario_e`, `horario_s`, `created_at`, `updated_at`) VALUES
@@ -169,7 +169,7 @@ INSERT INTO `horario_details` (`id`, `horario_id`, `hd_nombre`, `horario_e`, `ho
 -- --------------------------------------------------------
 
 --
--- Table structure for table `inactividades`
+-- Estructura de tabla para la tabla `inactividades`
 --
 
 CREATE TABLE `inactividades` (
@@ -182,7 +182,7 @@ CREATE TABLE `inactividades` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `inactividades`
+-- Volcado de datos para la tabla `inactividades`
 --
 
 INSERT INTO `inactividades` (`id`, `justificante`, `fecha_inicio`, `fecha_final`, `created_at`, `updated_at`) VALUES
@@ -192,7 +192,7 @@ INSERT INTO `inactividades` (`id`, `justificante`, `fecha_inicio`, `fecha_final`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `inactividad_details`
+-- Estructura de tabla para la tabla `inactividad_details`
 --
 
 CREATE TABLE `inactividad_details` (
@@ -206,7 +206,7 @@ CREATE TABLE `inactividad_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `inactividad_details`
+-- Volcado de datos para la tabla `inactividad_details`
 --
 
 INSERT INTO `inactividad_details` (`id`, `inactividad_id`, `inact_fecha`, `inact_mes`, `inact_anio`, `created_at`, `updated_at`) VALUES
@@ -217,7 +217,7 @@ INSERT INTO `inactividad_details` (`id`, `inactividad_id`, `inact_fecha`, `inact
 -- --------------------------------------------------------
 
 --
--- Table structure for table `marcajes`
+-- Estructura de tabla para la tabla `marcajes`
 --
 
 CREATE TABLE `marcajes` (
@@ -232,41 +232,7 @@ CREATE TABLE `marcajes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `materials`
---
-
-CREATE TABLE `materials` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `nombre` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `modelo` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `caracteristicas` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `cantidad_total` bigint(20) NOT NULL,
-  `cantidad_prestamo` bigint(20) DEFAULT NULL,
-  `fecha` date DEFAULT NULL,
-  `imagen` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `materials`
---
-
-INSERT INTO `materials` (`id`, `nombre`, `modelo`, `caracteristicas`, `cantidad_total`, `cantidad_prestamo`, `fecha`, `imagen`, `status`) VALUES
-(1, 'Node', 'PCI', '1 GB', 7, 5, '2020-08-26', 'backEnd/assets/img/material/1598549776.jpeg', '1'),
-(2, 'Rasberry Pi', 'B+', '512 MB Sin Fuente EXterna', 10, 5, '2020-08-26', 'backEnd/assets/img/material/1598549803.jpeg', '1'),
-(3, 'Servo', 'Metalico', '180°', 20, 0, '2020-08-26', 'backEnd/assets/img/material/1598549836.jpeg', '1'),
-(4, 'Servo', 'Plastico', '90°', 10, 10, '2020-08-26', 'backEnd/assets/img/material/1598549852.jpeg', '1'),
-(5, 'Arduino', 'Uno', '10 mB', 20, 20, '2020-08-26', 'backEnd/assets/img/material/1598549895.jpeg', '1'),
-(6, 'Arduino', 'Nano', 'Sin Memoria', 25, 15, '2020-08-27', 'backEnd/assets/img/material/1598549916.jpeg', '1'),
-(7, 'LET LCD', '2.5 volts', '3 Pines', 5, 5, '2020-08-26', 'backEnd/assets/img/material/1598549939.jpeg', '1'),
-(8, 'Node', 'MCU', '10 MB', 9, 9, '2020-08-26', 'backEnd/assets/img/material/1598549959.jpeg', '1'),
-(9, 'Sensor', 'MC78', 'Sonido', 7, 7, '2020-08-26', 'backEnd/assets/img/material/1598549976.jpeg', '1'),
-(10, 'Sensor', 'OH2', 'Temperatura', 9, 9, '2020-08-26', 'backEnd/assets/img/material/1598549990.jpeg', '1');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `migrations`
+-- Estructura de tabla para la tabla `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -276,7 +242,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Volcado de datos para la tabla `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -297,7 +263,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Estructura de tabla para la tabla `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -309,7 +275,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `permisos`
+-- Estructura de tabla para la tabla `permisos`
 --
 
 CREATE TABLE `permisos` (
@@ -323,7 +289,7 @@ CREATE TABLE `permisos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `permisos`
+-- Volcado de datos para la tabla `permisos`
 --
 
 INSERT INTO `permisos` (`id`, `practicante_id`, `justificante`, `fecha_inicio`, `fecha_final`, `created_at`, `updated_at`) VALUES
@@ -334,7 +300,7 @@ INSERT INTO `permisos` (`id`, `practicante_id`, `justificante`, `fecha_inicio`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `permiso_details`
+-- Estructura de tabla para la tabla `permiso_details`
 --
 
 CREATE TABLE `permiso_details` (
@@ -349,7 +315,7 @@ CREATE TABLE `permiso_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `permiso_details`
+-- Volcado de datos para la tabla `permiso_details`
 --
 
 INSERT INTO `permiso_details` (`id`, `permiso_id`, `horario_details_id`, `perm_fecha`, `perm_mes`, `perm_anio`, `created_at`, `updated_at`) VALUES
@@ -360,7 +326,7 @@ INSERT INTO `permiso_details` (`id`, `permiso_id`, `horario_details_id`, `perm_f
 -- --------------------------------------------------------
 
 --
--- Table structure for table `practicantes`
+-- Estructura de tabla para la tabla `practicantes`
 --
 
 CREATE TABLE `practicantes` (
@@ -381,7 +347,7 @@ CREATE TABLE `practicantes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `practicantes`
+-- Volcado de datos para la tabla `practicantes`
 --
 
 INSERT INTO `practicantes` (`id`, `nombre`, `horario_id`, `ci`, `cu`, `carrera`, `email`, `telefono`, `direccion`, `estado`, `f_ingreso`, `foto`, `created_at`, `updated_at`) VALUES
@@ -392,7 +358,7 @@ INSERT INTO `practicantes` (`id`, `nombre`, `horario_id`, `ci`, `cu`, `carrera`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estructura de tabla para la tabla `users`
 --
 
 CREATE TABLE `users` (
@@ -407,179 +373,179 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Volcado de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'David Escalante', 'Davidthbsossa@gmail.com', NULL, '$2y$10$jc1mRGeu19OpPKeT4qQf3eRgsK3GzmF97wRexkcsOkzMwrb9MQVga', NULL, '2020-08-27 21:41:44', '2020-08-27 21:41:44');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `asistencias`
+-- Indices de la tabla `asistencias`
 --
 ALTER TABLE `asistencias`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `check_faltas`
+-- Indices de la tabla `check_faltas`
 --
 ALTER TABLE `check_faltas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `faltas`
+-- Indices de la tabla `faltas`
 --
 ALTER TABLE `faltas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `horarios`
+-- Indices de la tabla `horarios`
 --
 ALTER TABLE `horarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `horario_details`
+-- Indices de la tabla `horario_details`
 --
 ALTER TABLE `horario_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `inactividades`
+-- Indices de la tabla `inactividades`
 --
 ALTER TABLE `inactividades`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `inactividad_details`
+-- Indices de la tabla `inactividad_details`
 --
 ALTER TABLE `inactividad_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `marcajes`
+-- Indices de la tabla `marcajes`
 --
 ALTER TABLE `marcajes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Indices de la tabla `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Indices de la tabla `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `permisos`
+-- Indices de la tabla `permisos`
 --
 ALTER TABLE `permisos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `permiso_details`
+-- Indices de la tabla `permiso_details`
 --
 ALTER TABLE `permiso_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `practicantes`
+-- Indices de la tabla `practicantes`
 --
 ALTER TABLE `practicantes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indices de la tabla `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `asistencias`
+-- AUTO_INCREMENT de la tabla `asistencias`
 --
 ALTER TABLE `asistencias`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `check_faltas`
+-- AUTO_INCREMENT de la tabla `check_faltas`
 --
 ALTER TABLE `check_faltas`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `faltas`
+-- AUTO_INCREMENT de la tabla `faltas`
 --
 ALTER TABLE `faltas`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT for table `horarios`
+-- AUTO_INCREMENT de la tabla `horarios`
 --
 ALTER TABLE `horarios`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `horario_details`
+-- AUTO_INCREMENT de la tabla `horario_details`
 --
 ALTER TABLE `horario_details`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `inactividades`
+-- AUTO_INCREMENT de la tabla `inactividades`
 --
 ALTER TABLE `inactividades`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `inactividad_details`
+-- AUTO_INCREMENT de la tabla `inactividad_details`
 --
 ALTER TABLE `inactividad_details`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `marcajes`
+-- AUTO_INCREMENT de la tabla `marcajes`
 --
 ALTER TABLE `marcajes`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `permisos`
+-- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `permiso_details`
+-- AUTO_INCREMENT de la tabla `permiso_details`
 --
 ALTER TABLE `permiso_details`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `practicantes`
+-- AUTO_INCREMENT de la tabla `practicantes`
 --
 ALTER TABLE `practicantes`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
