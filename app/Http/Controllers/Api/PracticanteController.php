@@ -62,12 +62,6 @@ class PracticanteController extends Controller
         return $practicantes;
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $this->validate($request,[
@@ -115,12 +109,6 @@ class PracticanteController extends Controller
         return response()->json(['success'=>'Add Practicante']);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $practicante = Practicante::where('id',$id)->first();
@@ -141,13 +129,6 @@ class PracticanteController extends Controller
         return response()->json([$practicante,$horarios]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
 
@@ -199,12 +180,6 @@ class PracticanteController extends Controller
         return response()->json(['success'=>'Update Practicante']);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         // $practicante = Practicante::where('id',$id)->first();

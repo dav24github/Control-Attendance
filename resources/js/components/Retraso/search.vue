@@ -47,19 +47,20 @@
                                             <div class="form-group">
                                                 <label>Mes &nbsp &nbsp</label>                
                                                 <select v-model="form.month" class="form-control " id="">
-                                                    <option value="">--select month--</option>
-                                                    <option value="January">January</option>
-                                                    <option value="February">February</option>
-                                                    <option value="March">March</option>
-                                                    <option value="April">April</option>
-                                                    <option value="May">May</option>
-                                                    <option value="June">June</option>
-                                                    <option value="July">July</option>
-                                                    <option value="August">August</option>
-                                                    <option value="September">September</option>
-                                                    <option value="October">October</option>
-                                                    <option value="November">November</option>
-                                                    <option value="December">December</option>
+                                                    <option value="">--Seleccionar Mes--</option>
+                                                    <option value="January">Enero</option>
+                                                    <option value="February">Febrero</option>
+                                                    <option value="March">Marzo</option>
+                                                    <option value="April">Abril</option>
+                                                    <option value="May">Mayo</option>
+                                                    <option value="June">Junio</option>
+                                                    <option value="July">Julio</option>
+                                                    <option value="August">Agosto</option>
+                                                    <option value="September">Septiembre</option>
+                                                    <option value="October">Octubre</option>
+                                                    <option value="November">Noviembre</option>
+                                                    <option value="December">Deciembre</option>                                       
+                                                    <option value="todo">*Ver Todo*</option>
                                                 </select>
                                                 <small class="text-danger" v-if="errors.f_month">{{errors.f_month[0]}}</small>
                                             </div>
@@ -117,7 +118,6 @@
                     month:'',
                 },                
                 errors:{},
-                searchFillter:'',
                 visto: true
             }
         },

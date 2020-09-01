@@ -19,10 +19,10 @@
 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Email</label>
+                                        <label>Practicante</label>
                                         <select class="form-control" v-model="form.practicante_id" @change="practicante_horario()">
-                                            <option value="">--Selecciona Email--</option>
-                                            <option :value="practicante.id" v-for="practicante in practicantes">{{practicante.email}}</option>
+                                            <option value="">--Seleccionar Nombre--</option>
+                                            <option :value="practicante.id" v-for="practicante in practicantes">{{practicante.nombre}}</option>
                                         </select>
                                     </div>
                                 </div> 
@@ -47,7 +47,7 @@
                                     <div class="form-group">
                                         <label>Turno</label>
                                         <select class="form-control " v-model="form.horario_details_id">
-                                            <option value="">--Selecciona Turno--</option>
+                                            <option value="">--Seleccionar Turno--</option>
                                             <option :value="horario_detail.id" v-for="horario_detail in horario_details">
                                                 <span v-if="horario_detail.hd_nombre!=null">{{horario_detail.hd_nombre}}</span>
                                                 <span v-else>{{horario_detail.h_nombre}}</span>

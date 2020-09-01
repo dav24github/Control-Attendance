@@ -33,7 +33,7 @@
                                             <div class="form-group">
                                                 <label>Mes inicial &nbsp &nbsp</label>                
                                                 <select v-model="form.i_month" class="form-control " id="">
-                                                    <option value="">--Selecciona Mes--</option>
+                                                    <option value="">--Seleccionar Mes--</option>
                                                     <option value="todo">*Ver Todos*</option>
                                                     <option value="1">Enero</option>
                                                     <option value="2">Febrero</option>
@@ -55,7 +55,7 @@
                                             <div class="form-group">                                             
                                                 <label>Mes final &nbsp &nbsp</label>  
                                                 <select v-model="form.f_month" class="form-control " id="">
-                                                    <option value="">--Selecciona Mes--</option>
+                                                    <option value="">--Seleccionar Mes--</option>
                                                     <option value="todo">*Ver Todos*</option>
                                                     <option value="1">Enero</option>
                                                     <option value="2">Febrero</option>
@@ -75,7 +75,7 @@
                                         </div> 
                                         <div class="col-md-12">
                                             <div class="form-group">                                   
-                                                <button class="btn btn-success mt-2" type="submit">Submit</button> 
+                                                <button class="btn btn-success mt-2" type="submit">Buscar</button> 
                                             </div>
                                         </div>
                                     </div>

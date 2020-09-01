@@ -30,7 +30,7 @@
                                             <td v-else><a><strong>Estado: &nbsp</strong>Inactive</a></td>
                                         </tr><br>
                                         <tr>
-                                            <td><a><strong>Fecha de Ingreso: &nbsp</strong> {{practicante.f_ingreso}}</a></td>
+                                            <td colspan="2"><a><strong>Fecha de Ingreso: &nbsp</strong> {{fecha_formato(practicante.f_ingreso)}}</a></td>
                                         </tr><br>
                                     </table>
                                 </div>
@@ -191,6 +191,7 @@
 </template>
 
 <script>
+    import Moment from 'moment';
     export default {
         name: "practicanteDetails",
         data(){
@@ -311,10 +312,6 @@
             fecha_formato : function( date ) {
                 if(date!="") return moment( date ).format("DD/MM/YYYY");
                 else "";
-            },
-            formatoHorario(hora){
-                var splittedString=hora.split(":");
-                return splittedString.slice(0,-1).join(':');
             },
         },
         created() {

@@ -42,7 +42,7 @@
                                     <td><img :src="practicante.foto" alt="foto" style="width:60px;height:50px"></td>
                                     <td>{{practicante.nombre}}</td>
                                     <td v-if="practicante.horario != null">{{practicante.horario.h_nombre}}</td>
-                                    <td v-else=""></td>
+                                    <td v-else></td>
                                     <td>{{practicante.carrera}}</td>
                                     <td>{{practicante.email}}</td>       
                                     <td>

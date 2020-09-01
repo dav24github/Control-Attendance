@@ -39,7 +39,7 @@
                                     <div class="form-group">
                                         <label>Turno</label>
                                         <select class="form-control" v-model="form.horario_details_id">
-                                            <option value="">--Selecciona Turno--</option>
+                                            <option value="">--Seleccionar Turno--</option>
                                             <option :value="horario_detail.id" v-for="horario_detail in horario_details">
                                                 <span v-if="horario_detail.hd_nombre!=null">{{horario_detail.hd_nombre}}</span>
                                                 <span v-else>{{horario_detail.h_nombre}}</span>

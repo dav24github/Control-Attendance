@@ -9,7 +9,7 @@
                                 <form @submit.prevent="permisoDate">
                                     <label>Buscar por Fecha</label>
                                     <input type="date" class="form-control" v-model="form.date">
-                                    <button class="btn btn-success mt-2" type="submit">Submit</button>
+                                    <button class="btn btn-success mt-2" type="submit">Buscar</button>
                                 </form>
                             </div>
                         </div>
@@ -20,7 +20,7 @@
                                 <form @submit.prevent="permisoMonth">
                                     <label>Buscar por Mes</label>
                                     <select v-model="form.month" class="form-control " id="">
-                                        <option value="">--Selecciona Mes--</option>
+                                        <option value="">--Seleccionar Mes--</option>
                                         <option value="January">Enero</option>
                                         <option value="February">Febrero</option>
                                         <option value="March">Marzo</option>
@@ -35,7 +35,7 @@
                                         <option value="December">Deciembre</option>                                       
                                         <option value="todo">*Ver Todo*</option>
                                     </select>
-                                    <button class="btn btn-success mt-2" type="submit">Submit</button>
+                                    <button class="btn btn-success mt-2" type="submit">Buscar</button>
                                 </form>
                             </div>
                         </div>

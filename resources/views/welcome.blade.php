@@ -82,7 +82,7 @@
                     </li>
 
                     <li class="dropdown">
-                        <a href="#" class="menu-toggle nav-link has-dropdown"><i class="far fa-calendar-check"></i><span>Asistencia</span></a>
+                        <a href="#" class="menu-toggle nav-link has-dropdown"><i class="far fa-calendar-check"></i><span>Asistencias</span></a>
                         <ul class="dropdown-menu">
                             <li><router-link class="nav-link" :to="{name: 'asistenciaCreate'}">Nuevo</router-link></li>
                             <li><router-link class="nav-link" :to="{name:'asistencias'}">Lista</router-link></li>    
@@ -120,12 +120,16 @@
                             <li><router-link class="nav-link" :to="{name:'inactividadIndex'}">Lista</router-link></li>    
                             <li><router-link class="nav-link" :to="{name:'searchInact'}">Búsqueda</router-link></li>
                         </ul>
-                    </li>      
-                    
+                    </li>    
+
+                    <li>
+                        <router-link class="nav-link" :to="{name:'generarPdf'}"><i class="far fa-file-pdf"></i><span>Informes</span></router-link>
+                    </li>                    
+
                     <li style="background-color:#83bceb" class="hover dropdown active">
                         <router-link :to="{name: 'puntoMarcaje'}" class="nav-link"><i data-feather="monitor"></i><span>Punto de Marcaje</span></router-link>
-                    </li>
-                    
+                    </li>                    
+
                     <li>
                         <router-link class="nav-link" :to="{name: 'logout'}"><i class="fas fa-power-off"></i>Cerrar Sesión</router-link>
                     </li>

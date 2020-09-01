@@ -14,9 +14,14 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'],function ($router) {
 
 Route::group(['middleware' => 'api','namespace'=>'Api'],function ($router) {
 
-    
-    
-   
+    //Informe route 
+    Route::post('get-informe','GenerarPdfController@getInforme');
+    Route::post('total-retraso-pdf','GenerarPdfController@totalRetraso');
+    Route::post('dias-trabajo-nro-pdf','GenerarPdfController@DiasTrabajados');
+    Route::post('asistencias-nro-pdf','GenerarPdfController@nroAsistenciasPracticante');
+    Route::post('faltas-nro-pdf','GenerarPdfController@nroFaltasPracticante');
+    Route::post('permisos-nro-pdf','GenerarPdfController@nroPermisosPracticante');
+
     //practicante route 
     Route::get('findPracticanteHistorial','PracticanteController@searchHistorial');
     Route::get('findPracticante','PracticanteController@search');    

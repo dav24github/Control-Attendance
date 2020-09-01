@@ -23,7 +23,7 @@
                                     <div class="form-group">
                                         <label>Buscar por Mes</label>
                                         <select v-model="form.month" class="form-control " id="">
-                                            <option value="">--Selecciona Mes--</option>
+                                            <option value="">--Seleccionar Mes--</option>
                                             <option value="January">Enero</option>
                                             <option value="February">Febrero</option>
                                             <option value="March">Marzo</option>

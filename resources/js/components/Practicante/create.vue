@@ -28,7 +28,7 @@
                                     <div class="form-group">
                                         <label>Horario</label>
                                         <select v-model="form.horario_id" class="form-control ">
-                                            <option value="">--Selecciona Horario--</option>
+                                            <option value="">--Seleccionar Horario--</option>
                                             <option v-for="horario in horarios" :value="horario.id">{{horario.h_nombre}}</option>
                                         </select>
                                          <small class="text-danger" v-if="errors.horario_id">{{errors.horario_id[0]}}</small>

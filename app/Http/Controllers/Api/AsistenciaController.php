@@ -431,6 +431,9 @@ class AsistenciaController extends Controller
         ->where('estado',1)->get();
 
         $data=[];
+
+        if($request->month=="todo") return $this->allRetrasos();
+        
         foreach($practicantes as $practicante){
             $retrasos = DB::table('asistencias')
             ->select('retraso')

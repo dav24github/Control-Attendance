@@ -47,6 +47,8 @@ let historialFalta = require('./components/Falta/historial.vue').default;
 
 let puntoMarcaje = require('./components/PuntoMarcaje.vue').default;
 
+let generarPdf = require('./components/GenerarPdf.vue').default;
+
 export const routes = [
     { path: '/', component: login, name: 'login' },
     { path: '/register', component: register, name: 'register' },
@@ -94,6 +96,7 @@ export const routes = [
     { path: '/falta-search', component: searchFalta, name: 'searchFalta' },
     { path: '/falta-historial', component: historialFalta, name: 'historialFalta' },
 
-
     { path: '/punto-marcaje', component: puntoMarcaje, name: 'puntoMarcaje' },
+
+    { path: '/generar-pdf', component: generarPdf, name: 'generarPdf' },
 ];
